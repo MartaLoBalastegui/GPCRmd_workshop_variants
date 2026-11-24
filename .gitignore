@@ -1,0 +1,8 @@
+# Local Python environments
+.MV_analysis/
+MV_analysis/
+.venv/
+venv/
+env/
+data/C227Y_traj.dcd
+data/WT_traj.dcd
