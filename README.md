@@ -27,10 +27,16 @@ The practical focuses on variant **C227Y**, which disrupts a conserved cysteine 
 │   ├── structureC227Y.psf        # C227Y VMD structure
 │   └── C227Y_traj.dcd            # C227Y molecular dynamics trajectory
 ├── results/
-│   ├── disulfide_bond_WT.csv     # VMD distance measurements for WT
-│   └── disulfide_bond_C227Y.csv  # VMD distance measurements for C227Y
+│   ├── disulfide_bond_WT.csv     # Precomputed VMD distance measurements for WT
+│   └── disulfide_bond_C227Y.csv  # Precomputed VMD distance measurements for C227Y
 ├── images/                       # Figures used in the notebook
 ```
+
+## Molecular dynamics data availability
+
+- The **wild-type (WT) molecular dynamics simulation** is publicly available in GPCRmd: [GPCRmd entry 849](https://www.gpcrmd.org/view/849/).
+- The **C227Y mutated-system molecular dynamics simulation** is available on demand. Please contact us if you need access to the trajectory and associated structure files.
+- The WT and C227Y distance measurements have already been computed and are included in this repository as `results/disulfide_bond_WT.csv` and `results/disulfide_bond_C227Y.csv`. These precomputed data allow the distance analysis to be completed without the C227Y trajectory.
 
 ## Requirements
 
@@ -86,6 +92,8 @@ Run `code/analysing_MVs.ipynb` from top to bottom. The notebook:
 The AlphaMissense CSV uses amino-acid variant identifiers as row indices, allowing the predictions to be joined to the GPCRmd variant table.
 
 ## VMD molecular dynamics exercise
+
+The WT trajectory can be obtained from [GPCRmd entry 849](https://www.gpcrmd.org/view/849/). The C227Y trajectory is available only on demand, but it is not required for the workshop because the precomputed WT and C227Y residue-distance data are already available in `results/`.
 
 1. Launch VMD and load `data/structureWT.psf`.
 2. Load `data/WT_traj.dcd` on top of the WT structure.
